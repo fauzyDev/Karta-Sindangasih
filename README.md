@@ -7,8 +7,8 @@ Website resmi Karang Taruna Dusun Sindangasih - Platform digital untuk organisas
 - **Framework**: Next.js 15 dengan App Router
 - **Bahasa**: TypeScript 5
 - **Styling**: Tailwind CSS 4
-- **UI Components**: shadcn/ui (New York style)
-- **Icons**: Lucide React
+- **UI Components**: shadcn/ui
+- **Icons**: Lucide React, @tabler/icons-react
 
 ## 📁 Struktur Proyek
 
@@ -94,22 +94,22 @@ src/
 
 ### Install Dependencies
 ```bash
-npm install
+bun install
 ```
 
 ### Run Development Server
 ```bash
-npm run dev
+bun dev
 ```
 
 ### Build for Production
 ```bash
-npm run build
+bun run build
 ```
 
 ### Run Linting
 ```bash
-npm run lint
+bun run lint
 ```
 
 ## 📱 Responsive Design
@@ -139,7 +139,7 @@ Website ini dirancang dengan pendekatan mobile-first:
 ## 🔧 Customization
 
 ### Mengubah Nama Dusun
-1. Edit `src/components/Hero.tsx` - ubah "Mekar Sari"
+1. Edit `src/components/Hero.tsx` - ubah "Sindangasih"
 2. Edit `src/components/Footer.tsx` - ubah copyright text
 3. Edit `src/app/metadata.ts` - ubah SEO metadata
 
@@ -150,7 +150,7 @@ Website ini dirancang dengan pendekatan mobile-first:
 
 ### Menambahkan Data Real
 1. Siapkan database schema di `prisma/schema.prisma`
-2. Run `npm run db:push`
+2. Run `bun run db:push`
 3. Update komponen dengan data dari database
 4. Buat API routes untuk dynamic content
 
