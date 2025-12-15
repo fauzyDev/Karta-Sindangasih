@@ -1,6 +1,5 @@
 "use client"
 
-import Link from "next/link"
 import { useRouter } from "next/navigation"
 import {
   IconDotsVertical,
@@ -98,7 +97,7 @@ export function NavUser({ user }: { user: { name: string; email: string; avatar:
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
-              <Button onClick={logout} className="hover:cursor-pointer bg-transparent  w-full justify-start">
+              <Button variant="link" size="icon" onClick={logout} className="hover:cursor-pointer w-full justify-start">
                 <IconLogout />
                 Log out
               </Button>

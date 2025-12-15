@@ -36,43 +36,43 @@ export default function OrganizationStructure() {
   return (
     <div className="py-12 px-4 md:px-8">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-center text-3xl font-bold mb-10">
+        <h2 className="text-center text-3xl text-gray-800 font-bold mb-10">
           Struktur Organisasi
         </h2>
 
         {/* Top (Pembina) */}
         <div className="flex justify-center">
           <div className="relative">
-            <Card className="w-72 bg-white/50 text-center shadow">
+            <Card className="w-72 bg-white/50 text-center border-2 border-gray-300 shadow">
               <CardHeader>
                 <CardTitle className="flex items-center justify-center gap-2">
-                  {top.icon && <top.icon className="w-5 h-5 fill-gray-900" />}
-                  <span className="text-lg">{top.title}</span>
+                  {top.icon && <top.icon className="w-5 h-5 dark:text-gray-800" />}
+                  <span className="text-lg text-gray-800">{top.title}</span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-muted-foreground">{top.name}</CardContent>
             </Card>
 
             {/* vertical connector from top to executives */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 top-full h-8 w-px bg-gray-200" />
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-full h-8 w-px bg-gray-300" />
           </div>
         </div>
 
         {/* Executives row */}
         <div className="mt-8 relative">
           {/* horizontal connector between two executives (only visible if two items) */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-6 w-64 h-px bg-gray-200" />
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-6 w-64 h-px bg-gray-300" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
             {executives.map((p, i) => (
               <div key={i} className="flex flex-col items-center">
                 {/* vertical connector from executives up to top (on small screens, connectors stack) */}
-                <div className="hidden md:block mb-2 h-6 w-px bg-gray-200" />
-                <Card className="w-full max-w-xs text-center shadow">
+                <div className="hidden md:block mb-2 h-6 w-px bg-gray-300" />
+                <Card className="w-full bg-white/50 border-2 border-gray-300 max-w-xs text-center shadow">
                   <CardHeader>
                     <CardTitle className="flex items-center justify-center gap-2">
-                      {p.icon && <p.icon className="w-5 h-5" />}
-                      <span className="text-lg">{p.title}</span>
+                      {p.icon && <p.icon className="w-5 h-5 text-gray-800" />}
+                      <span className="text-lg text-gray-800">{p.title}</span>
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="text-muted-foreground">{p.name}</CardContent>
@@ -83,7 +83,7 @@ export default function OrganizationStructure() {
 
           {/* vertical connector from executives to officers */}
           <div className="flex justify-center">
-            <div className="w-px h-8 bg-gray-200 mt-6" />
+            <div className="w-px h-8 bg-gray-300 mt-6" />
           </div>
         </div>
 
@@ -92,18 +92,18 @@ export default function OrganizationStructure() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center">
             {officers.map((p, i) => (
               <div key={i} className="relative">
-                <Card className="w-72 text-center shadow-sm">
+                <Card className="w-72 bg-white/50 border-2 border-gray-300 text-center shadow-sm">
                   <CardHeader>
                     <CardTitle className="flex items-center justify-center gap-2">
-                      {p.icon && <p.icon className="w-5 h-5" />}
-                      <span className="text-lg">{p.title}</span>
+                      {p.icon && <p.icon className="w-5 h-5 text-gray-800" />}
+                      <span className="text-lg text-gray-800">{p.title}</span>
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="text-muted-foreground">{p.name}</CardContent>
                 </Card>
 
                 {/* connector from officer to seksi (vertical) */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 top-full h-8 w-px bg-gray-200" />
+                <div className="absolute left-1/2 transform -translate-x-1/2 top-full h-8 w-px bg-gray-300" />
               </div>
             ))}
           </div>
@@ -118,12 +118,12 @@ export default function OrganizationStructure() {
 
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {seksi.map((s, i) => (
-              <Card key={i} className="flex items-center gap-4 p-4">
+              <Card key={i} className="flex bg-white/50 border-2 border-gray-300 items-center gap-4 p-4">
                 <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center">
                   {s.icon && <s.icon className="w-5 h-5 text-gray-700" />}
                 </div>
                 <div>
-                  <div className="font-semibold">{s.title}</div>
+                  <div className="font-semibold text-gray-800">{s.title}</div>
                 </div>
               </Card>
             ))}
