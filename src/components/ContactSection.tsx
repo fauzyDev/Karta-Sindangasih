@@ -3,7 +3,7 @@ import { MessageCircle, Instagram, MapPin } from 'lucide-react'
 
 export default function ContactSection() {
   return (
-    <section className="py-16 bg-muted/20">
+    <section className="py-16 bg-slate-100 border-t border-slate-200">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -15,7 +15,7 @@ export default function ContactSection() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          <Card className="bg-white text-center shadow-md hover:shadow-lg hover:translate-y-1 transition-shadow duration-300 group cursor-pointer">
+          <Card className="bg-card border border-gray-200 text-center shadow-md hover:shadow-lg hover:translate-y-1 transition-shadow duration-300 group cursor-pointer">
             <CardContent className="p-6">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-600 transition-colors">
                 <MessageCircle className="w-8 h-8 text-green-600 group-hover:text-white transition-colors" />
@@ -26,7 +26,7 @@ export default function ContactSection() {
             </CardContent>
           </Card>
 
-          <Card className="bg-white text-center shadow-md hover:shadow-lg hover:translate-y-1 transition-shadow duration-300 group cursor-pointer">
+          <Card className="bg-card border border-gray-200 text-center shadow-md hover:shadow-lg hover:translate-y-1 transition-shadow duration-300 group cursor-pointer">
             <CardContent className="p-6">
               <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-pink-600 transition-colors">
                 <Instagram className="w-8 h-8 text-pink-600 group-hover:text-white transition-colors" />
@@ -37,7 +37,7 @@ export default function ContactSection() {
             </CardContent>
           </Card>
 
-          <Card className="bg-white text-center shadow-md hover:translate-y-1 hover:shadow-lg transition-shadow duration-300">
+          <Card className="bg-card border border-gray-200 text-center shadow-md hover:translate-y-1 hover:shadow-lg transition-shadow duration-300">
             <CardContent className="p-6">
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-emerald-600" />

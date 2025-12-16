@@ -3,7 +3,7 @@ import { Route } from "next"
 
 export default function CardItem({ item, baseUrl }) {
   return (
-    <div className="border rounded-xl p-4 bg-white shadow-md">
+    <div className="border-3 border-gray-300 rounded-xl p-4 bg-card shadow-md">
       <h2 className="text-xl font-semibold">{item.title}</h2>
 
       {item.date && (

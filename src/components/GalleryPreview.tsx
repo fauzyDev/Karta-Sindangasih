@@ -5,7 +5,7 @@ export default function GalleryPreview() {
   const galleryImages = Array.from({ length: 6 }, (_, i) => i + 1)
 
   return (
-    <section className="py-16 bg-muted/20">
+    <section className="py-16 bg-slate-100 border-t border-slate-200">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">

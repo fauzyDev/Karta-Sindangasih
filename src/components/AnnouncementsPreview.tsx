@@ -24,7 +24,7 @@ export default function AnnouncementsPreview() {
   ]
 
   return (
-    <section className="py-16 bg-slate-100">
+    <section className="py-16 bg-slate-100 border-t border-slate-200">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
@@ -40,7 +40,7 @@ export default function AnnouncementsPreview() {
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {announcements.map((announcement) => (
-            <Card key={announcement.id} className="hover:shadow-lg transition-shadow duration-200 border bg-white/50 border-gray-200">
+            <Card key={announcement.id} className="hover:shadow-lg transition-shadow duration-200 shadow-md bg-card border border-gray-200">
               <CardHeader className="pb-3">
                 <div className="flex items-center gap-2 text-blue-600 mb-2">
                   <Calendar className="w-4 h-4" />

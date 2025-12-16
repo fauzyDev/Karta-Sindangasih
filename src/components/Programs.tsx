@@ -33,7 +33,7 @@ export default function Programs() {
   ]
 
   return (
-    <section className="py-16 bg-muted/10">
+    <section className="py-16 bg-background border-t border-slate-200">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -46,7 +46,7 @@ export default function Programs() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {programs.map((program) => (
-            <Card key={program.id} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white overflow-hidden">
+            <Card key={program.id} className="group hover:shadow-lg transition-all duration-300 shadow-md bg-card border border-gray-200 overflow-hidden">
               <div className={`h-2 bg-linear-to-r ${program.color}`}></div>
               <CardContent className="p-6 text-center">
                 <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-linear-to-br ${program.color} flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300`}>

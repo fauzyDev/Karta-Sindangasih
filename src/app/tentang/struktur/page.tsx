@@ -34,19 +34,19 @@ export default function OrganizationStructure() {
   ];
 
   return (
-    <div className="py-12 px-4 md:px-8">
+    <div className="py-12 px-4 md:px-8 bg-background">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-center text-3xl text-gray-800 font-bold mb-10">
+        <h2 className="text-center text-3xl text-gray-900 font-bold mb-10">
           Struktur Organisasi
         </h2>
 
         {/* Top (Pembina) */}
         <div className="flex justify-center">
           <div className="relative">
-            <Card className="w-72 bg-white/50 text-center border-2 border-gray-300 shadow">
+            <Card className="w-72 bg-card text-center border-2 border-gray-300 shadow">
               <CardHeader>
                 <CardTitle className="flex items-center justify-center gap-2">
-                  {top.icon && <top.icon className="w-5 h-5 dark:text-gray-800" />}
+                  {top.icon && <top.icon className="w-5 h-5" />}
                   <span className="text-lg text-gray-800">{top.title}</span>
                 </CardTitle>
               </CardHeader>
@@ -68,10 +68,10 @@ export default function OrganizationStructure() {
               <div key={i} className="flex flex-col items-center">
                 {/* vertical connector from executives up to top (on small screens, connectors stack) */}
                 <div className="hidden md:block mb-2 h-6 w-px bg-gray-300" />
-                <Card className="w-full bg-white/50 border-2 border-gray-300 max-w-xs text-center shadow">
+                <Card className="w-full bg-card border-2 border-gray-300 max-w-xs text-center shadow">
                   <CardHeader>
                     <CardTitle className="flex items-center justify-center gap-2">
-                      {p.icon && <p.icon className="w-5 h-5 text-gray-800" />}
+                      {p.icon && <p.icon className="w-5 h-5" />}
                       <span className="text-lg text-gray-800">{p.title}</span>
                     </CardTitle>
                   </CardHeader>
@@ -92,10 +92,10 @@ export default function OrganizationStructure() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center">
             {officers.map((p, i) => (
               <div key={i} className="relative">
-                <Card className="w-72 bg-white/50 border-2 border-gray-300 text-center shadow-sm">
+                <Card className="w-72 bg-card border-2 border-gray-300 text-center shadow-sm">
                   <CardHeader>
                     <CardTitle className="flex items-center justify-center gap-2">
-                      {p.icon && <p.icon className="w-5 h-5 text-gray-800" />}
+                      {p.icon && <p.icon className="w-5 h-5" />}
                       <span className="text-lg text-gray-800">{p.title}</span>
                     </CardTitle>
                   </CardHeader>
@@ -113,7 +113,7 @@ export default function OrganizationStructure() {
         <div className="mt-10">
           {/* horizontal connector line */}
           <div className="flex justify-center">
-            <div className="w-3/4 h-px bg-gray-200" />
+            <div className="w-3/4 h-px bg-gray-300" />
           </div>
 
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">

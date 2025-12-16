@@ -1,5 +1,4 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 
 export function proxy(req: NextRequest) {
     const pathname = req.nextUrl.pathname;
@@ -12,6 +11,6 @@ export function proxy(req: NextRequest) {
 
 export const config = {
     matcher: [
-        "/:path*" // apply ke semua route
+        "/:path*"
     ],
 };

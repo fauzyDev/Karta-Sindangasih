@@ -31,7 +31,7 @@ export default async function KegiatanDetail({ params }) {
     if (!item) return <div className="container py-10">Data tidak ditemukan.</div>
 
     return (
-        <div className="container py-10 space-y-6">
+        <div className="container py-10 space-y-6 bg-background">
             <h1 className="text-3xl font-bold text-gray-800">{item.title}</h1>
             <p className=" text-gray-900">{item.date}</p>
 

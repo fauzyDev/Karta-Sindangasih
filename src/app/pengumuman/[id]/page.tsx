@@ -17,7 +17,7 @@ export default function Page({ params }) {
   if (!item) return <div className="container py-10">Tidak ditemukan.</div>
 
   return (
-    <div className="container py-10 space-y-6">
+    <div className="container py-10 space-y-6 bg-background">
       <h1 className="text-3xl font-bold">{item.title}</h1>
       <p className="text-muted-foreground">{item.date}</p>
 

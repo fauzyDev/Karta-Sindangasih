@@ -1,6 +1,6 @@
 export default function VisiMisiPage() {
     return (
-        <div className="min-h-screen bg-gray-50 py-16 px-4 md:px-10">
+        <div className="bg-background py-16 px-4 md:px-10">
             <div className="max-w-4xl mx-auto">
 
                 {/* Header */}

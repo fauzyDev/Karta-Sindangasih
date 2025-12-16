@@ -23,7 +23,7 @@ export default function Hero() {
           <Button
             variant="outline"
             size="lg"
-            className="border-2 border-blue-400 text-blue-500 hover:text-blue-700 hover:cursor-pointer px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-200"
+            className="border-2 border-blue-400 text-blue-500 hover:bg-blue-500 hover:text-white hover:cursor-pointer px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-200"
           >
             Lihat Pengumuman
           </Button>

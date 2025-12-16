@@ -15,10 +15,10 @@ const pengumuman = [
 
 export default function PengumumanPage() {
   return (
-    <div className="container py-10 space-y-6">
-      <h1 className="text-3xl font-bold">Pengumuman</h1>
+    <div className="container py-10 space-y-6 bg-background">
+      <h1 className="text-3xl text-center text-gray-900 font-bold">Pengumuman</h1>
 
-      <div className="space-y-6">
+      <div className="grid md:grid-cols-4 gap-6 p-4">
         {pengumuman.map((item) => (
           <CardItem key={item.id} item={item} baseUrl="pengumuman" />
         ))}

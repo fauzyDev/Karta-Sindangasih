@@ -5,7 +5,7 @@ import { Users, Crown } from 'lucide-react'
 
 export default function LeaderPreview() {
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 bg-background border-t border-slate-200">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
@@ -20,7 +20,7 @@ export default function LeaderPreview() {
         </div>
 
         <div className="max-w-md mx-auto mb-8">
-          <Card className="bg-white/50 border border-gray-300 text-center overflow-hidden shadow-md hover:shadow-lg transition-all hover:translate-y-1 duration-300">
+          <Card className="bg-card border border-gray-200 text-center overflow-hidden shadow-md hover:shadow-lg transition-all hover:translate-y-1 duration-300">
             <div className="relative h-48 bg-linear-to-br from-emerald-400 to-teal-500">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-white text-6xl opacity-80">👤</div>

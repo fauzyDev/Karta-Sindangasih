@@ -28,7 +28,7 @@ export default function NewsPreview() {
   ]
 
   return (
-    <section className="py-16 bg-muted/10">
+    <section className="py-16 bg-background border-t border-slate-200">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -41,7 +41,7 @@ export default function NewsPreview() {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {news.map((item) => (
-            <Card key={item.id} className="overflow-hidden bg-white/50 border border-gray-200 shadow-md hover:shadow-xl hover:translate-y-1 transition-all duration-300 group cursor-pointer">
+            <Card key={item.id} className="overflow-hidden bg-card border border-gray-200 shadow-md hover:shadow-lg hover:translate-y-1 transition-all duration-300 group cursor-pointer">
               <div className="relative h-48 overflow-hidden bg-gray-200">
                 <div className="absolute inset-0 bg-linear-to-br from-emerald-400 to-teal-500 opacity-80"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
