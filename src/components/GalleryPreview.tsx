@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Camera, ArrowRight } from 'lucide-react'
 
@@ -15,14 +16,14 @@ export default function GalleryPreview() {
             </h2>
           </div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Dokumentasi momen-momen berharga dan kegiatan Karang Taruna Dusun Sindangasih
+            Dokumentasi momen-momen berharga dan kegiatan Karang Taruna Dusun Sindang Asih
           </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-8">
           {galleryImages.map((index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer"
             >
               <div className="absolute inset-0 bg-linear-to-br from-emerald-400 via-teal-400 to-cyan-400 opacity-80"></div>
@@ -37,12 +38,10 @@ export default function GalleryPreview() {
         </div>
 
         <div className="text-center">
-          <Button 
+          <Button asChild
             size="lg"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 font-medium rounded-lg transition-all duration-200 hover:shadow-lg hover:cursor-pointer"
-          >
-            <span>Lihat Galeri Lengkap</span>
-            <ArrowRight className="w-4 h-4 ml-2" />
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 font-medium rounded-lg transition-all duration-200 hover:shadow-lg hover:cursor-pointer">
+            <Link href="/galeri">Lihat Galeri Lengkap <ArrowRight className="w-4 h-4 ml-2" /></Link>
           </Button>
         </div>
       </div>

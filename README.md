@@ -1,6 +1,6 @@
-# Karang Taruna Dusun Sindangasih
+# Karang Taruna Dusun Sindang Asih
 
-Website resmi Karang Taruna Dusun Sindangasih - Platform digital untuk organisasi kepemudaan dusun.
+Website resmi Karang Taruna Dusun Sindang Asih - Platform digital untuk organisasi kepemudaan dusun.
 
 ## 🚀 Teknologi yang Digunakan
 
@@ -139,7 +139,7 @@ Website ini dirancang dengan pendekatan mobile-first:
 ## 🔧 Customization
 
 ### Mengubah Nama Dusun
-1. Edit `src/components/Hero.tsx` - ubah "Sindangasih"
+1. Edit `src/components/Hero.tsx` - ubah "Sindang Asih"
 2. Edit `src/components/Footer.tsx` - ubah copyright text
 3. Edit `src/app/metadata.ts` - ubah SEO metadata
 
@@ -156,8 +156,8 @@ Website ini dirancang dengan pendekatan mobile-first:
 
 ## 📄 Lisensi
 
-© 2025 Karang Taruna Dusun Sindangasih. Semua hak dilindungi.
+© 2025 Karang Taruna Dusun Sindang Asih. Semua hak dilindungi.
 
 ## 🤝 Kontribusi
 
-Website ini dikembangkan untuk kepentingan komunitas. Untuk kontribusi atau saran, silakan hubungi pengurus Karang Taruna Dusun Sindangasih.
+Website ini dikembangkan untuk kepentingan komunitas. Untuk kontribusi atau saran, silakan hubungi pengurus Karang Taruna Dusun Sindang Asih.

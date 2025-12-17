@@ -34,7 +34,7 @@ export default function AnnouncementsPreview() {
             </h2>
           </div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Informasi penting dan kegiatan terkini dari Karang Taruna Dusun Sindangasih
+            Informasi penting dan kegiatan terkini dari Karang Taruna Dusun Sindang Asih
           </p>
         </div>
 

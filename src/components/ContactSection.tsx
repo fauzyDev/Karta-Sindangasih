@@ -32,8 +32,8 @@ export default function ContactSection() {
                 <Instagram className="w-8 h-8 text-pink-600 group-hover:text-white transition-colors" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Instagram</h3>
-              <p className="text-gray-600 text-sm">@kartasindangasih</p>
-              <p className="text-pink-600 text-sm mt-2 font-medium">Follow kami</p>
+              <p className="text-gray-600 text-sm">@kartasindang Asih</p>
+              <a href="https://www.instagram.com/kartasindangasih" target="_blank" className="text-pink-600 text-sm mt-2 font-medium">Follow kami</a>
             </CardContent>
           </Card>
 
@@ -43,7 +43,7 @@ export default function ContactSection() {
                 <MapPin className="w-8 h-8 text-emerald-600" />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Alamat</h3>
-              <p className="text-gray-600 text-sm">Dusun Sindangasih,</p>
+              <p className="text-gray-600 text-sm">Dusun Sindang Asih,</p>
               <p className="text-gray-600 text-sm">Desa Kujangsari,</p>
               <p className="text-gray-600 text-sm">Kecamatan Langensari,</p>
               <p className="text-gray-600 text-sm">Kota Banjar</p>

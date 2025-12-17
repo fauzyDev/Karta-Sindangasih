@@ -9,4 +9,4 @@ export async function GET() {
         uptime: formatUptime(process.uptime())
     })
 }
- 
+  

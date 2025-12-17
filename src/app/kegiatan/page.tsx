@@ -8,7 +8,7 @@ const kegiatan = [
     thumbnail: "/images/kegiatan/kerjabakti.jpg",
     excerpt: "Kerja bakti bersama warga membersihkan lingkungan dusun.",
     content: `
-      Kegiatan kerja bakti bersama warga Dusun Sindangasih untuk menjaga
+      Kegiatan kerja bakti bersama warga Dusun Sindang Asih untuk menjaga
       kebersihan dan kenyamanan lingkungan.
     `,
   },

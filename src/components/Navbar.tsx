@@ -48,7 +48,7 @@ export default function Navbar() {
             </div>
             <div className="hidden sm:block">
               <span className="text-lg font-bold text-gray-900">Karang Taruna</span>
-              <span className="block text-sm text-emerald-600 -mt-1">Dusun Sindangasih</span>
+              <span className="block text-sm text-emerald-600 -mt-1">Dusun Sindang Asih</span>
             </div>
           </Link>
 

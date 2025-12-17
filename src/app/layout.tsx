@@ -1,6 +1,7 @@
 import { cookies } from "next/headers";
 import type { Metadata } from "next";
 import { metadata as pageMetadata } from "./metadata";
+import { organizationSchema } from "@/lib/schema";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
@@ -26,6 +27,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   return (
     <html lang="id" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth bg-background text-foreground overscroll-none`}>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema]) }} />
         {!isDashboard && <Navbar />}
         {children}
         {!isDashboard && <Toaster />}

@@ -32,7 +32,7 @@ export default function AboutSection() {
             Tentang Kami
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
-            Karang Taruna Dusun Sindangasih adalah organisasi kepemudaan yang berkomitmen untuk 
+            Karang Taruna Dusun Sindang Asih adalah organisasi kepemudaan yang berkomitmen untuk 
             menjadi wadah berkembangnya generasi muda yang berkarakter, kreatif, dan bertanggung jawab. 
             Kami berfokus pada pemberdayaan pemuda, pelestarian budaya lokal, serta pembangunan 
             masyarakat yang berkelanjutan melalui berbagai program sosial, pendidikan, dan ekonomi.

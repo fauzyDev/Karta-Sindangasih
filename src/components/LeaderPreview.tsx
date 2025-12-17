@@ -15,7 +15,7 @@ export default function LeaderPreview() {
             </h2>
           </div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Tim pengurus Karang Taruna Dusun Sindangasih periode 2024-2027
+            Tim pengurus Karang Taruna Dusun Sindang Asih
           </p>
         </div>
 
@@ -38,7 +38,7 @@ export default function LeaderPreview() {
                 Cahya Suhendera
               </h3>
               <p className="text-gray-600 mb-4">
-                Ketua Karang Taruna Dusun Sindangasih
+                Ketua Karang Taruna Dusun Sindang Asih
               </p>
               <div className="text-sm text-gray-500 mb-4">
                 <p>📱 +62 812-3456-7890</p>
