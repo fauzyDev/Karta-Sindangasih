@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "id_ID",
   },
+  verification: {
+    google: "CYn2r3DPm_l_pM2eO-igtXh31XdhghzchFFTEuL3onA"
+  },
   robots: {
     index: true,
     follow: true,
