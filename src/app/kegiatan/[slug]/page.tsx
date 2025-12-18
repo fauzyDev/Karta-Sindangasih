@@ -2,6 +2,7 @@ const kegiatan = [
   {
     id: "kerja-bakti-01",
     title: "Kerja Bakti Bersih Dusun",
+    slug: "kerja-bakti-bersih-dusun",
     date: "2024-11-01",
     thumbnail: "/images/kegiatan/kerjabakti.jpg",
     excerpt: "Kerja bakti bersama warga membersihkan lingkungan dusun.",
@@ -13,6 +14,7 @@ const kegiatan = [
   {
     id: "turnamen-bola-02",
     title: "Turnamen Sepak Bola Dusun",
+    slug: "turnamen-sepak-bola-dusun",
     date: "2024-12-05",
     thumbnail: "/images/kegiatan/sepakbola.jpg",
     excerpt: "Turnamen sepak bola antar RT untuk mempererat silaturahmi.",
@@ -24,9 +26,9 @@ const kegiatan = [
 ]
 
 export default async function KegiatanDetail({ params }) {
-    const { id } = await params
+    const { slug } = await params
 
-    const item = kegiatan.find((k) => k.id === id)
+    const item = kegiatan.find((k) => k.slug === slug)
 
     if (!item) return <div className="container py-10">Data tidak ditemukan.</div>
 

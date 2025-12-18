@@ -4,6 +4,7 @@ const kegiatan = [
   {
     id: "kerja-bakti-01",
     title: "Kerja Bakti Bersih Dusun",
+    slug: "kerja-bakti-bersih-dusun",
     date: "2024-11-01",
     thumbnail: "/images/kegiatan/kerjabakti.jpg",
     excerpt: "Kerja bakti bersama warga membersihkan lingkungan dusun.",

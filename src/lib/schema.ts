@@ -8,7 +8,7 @@ export const organizationSchema = {
   address: {
     "@type": "PostalAddress",
     streetAddress: "Jl. Raya Kujang",
-    addressLocality: "Kujangsari ",
+    addressLocality: "Desa Kujangsari",
     addressRegion: "Jawa Barat",
     addressCountry: "ID",
   },

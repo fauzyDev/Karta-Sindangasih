@@ -13,17 +13,17 @@ export default function Hero() {
           Wadah pemuda dusun untuk berkarya, berinovasi, dan berkontribusi dalam pembangunan masyarakat yang lebih baik dan sejahtera.
         </p>
 
-        <div className="flex flex-row gap-3 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
             size="lg"
-            className="bg-emerald-500 hover:bg-emerald-700 hover:cursor-pointer text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-md transition-all duration-200 hover:shadow-lg"
+            className="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-700 hover:cursor-pointer text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-md transition-all duration-200 hover:shadow-lg"
           >
             Lihat Kegiatan
           </Button>
           <Button
             variant="outline"
             size="lg"
-            className="border-2 border-blue-400 text-blue-500 hover:bg-blue-500 hover:text-white hover:cursor-pointer px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-200"
+            className="w-full sm:w-auto border-2 border-blue-400 text-blue-500 hover:bg-blue-500 hover:text-white hover:cursor-pointer sm:px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-200"
           >
             Lihat Pengumuman
           </Button>

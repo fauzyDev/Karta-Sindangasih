@@ -15,7 +15,7 @@ export default function CardItem({ item, baseUrl }) {
       )}
 
       <Link
-        href={`/${baseUrl}/${item.id}` as Route}
+        href={`/${baseUrl}/${item.slug}` as Route}
         className="text-primary font-semibold hover:underline bg-white shadow-md"
       >
         Selengkapnya →

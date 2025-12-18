@@ -2,10 +2,13 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Karang Taruna Dusun Sindang Asih - Wadah Pemuda Berkarya",
-  description: "Website Resmi Karang Taruna Dusun Sindang Asih. Karang Taruna Dusun Sindang asih adalah organisasi kepemudaan yang berkomitmen untuk pemberdayaan pemuda, pembangunan masyarakat, dan pelestarian budaya lokal.",
+  description: "Website Resmi Karang Taruna Dusun Sindang Asih Desa Kujangsari. Karang Taruna Dusun Sindang asih adalah organisasi kepemudaan yang berkomitmen untuk pemberdayaan pemuda, pembangunan masyarakat, dan pelestarian budaya lokal.",
   keywords: [
     "Karang Taruna",
     "Dusun Sindang Asih",
+    "Desa Kujangsari",
+    "Kecamatan Langensari",
+    "Kota Banjar",
     "Organisasi Pemuda",
     "Kepemudaan",
     "Pemberdayaan Masyarakat",
