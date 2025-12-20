@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 const kegiatan = [
   {
     id: "kerja-bakti-01",
@@ -25,25 +27,29 @@ const kegiatan = [
   },
 ]
 
-export default async function KegiatanDetail({ params }) {
-    const { slug } = await params
+type PropsParams = {
+  params: Promise<{ slug: string }>
+}
 
-    const item = kegiatan.find((k) => k.slug === slug)
+export default async function KegiatanDetail({ params }: PropsParams) {
+  const { slug } = await params
 
-    if (!item) return <div className="container py-10">Data tidak ditemukan.</div>
+  const item = kegiatan.find((k) => k.slug === slug)
 
-    return (
-        <div className="container py-10 space-y-6 bg-background">
-            <h1 className="text-3xl font-bold text-gray-800">{item.title}</h1>
-            <p className=" text-gray-900">{item.date}</p>
+  if (!item) return <div className="container py-10">Data tidak ditemukan.</div>
 
-            {item.thumbnail && (
-                <img src={item.thumbnail} className="rounded-xl w-full" />
-            )}
+  return (
+    <div className="container py-10 space-y-6 bg-background">
+      <h1 className="text-3xl font-bold text-gray-800">{item.title}</h1>
+      <p className=" text-gray-900">{item.date}</p>
 
-            <div className="prose dark:prose-invert max-w-none text-gray-900">
-                {item.content}
-            </div>
-        </div>
-    )
+      {item.thumbnail && (
+        <Image src={item.thumbnail} alt={item.title} className="rounded-xl w-full" />
+      )}
+
+      <div className="prose dark:prose-invert max-w-none text-gray-900">
+        {item.content}
+      </div>
+    </div>
+  )
 }
