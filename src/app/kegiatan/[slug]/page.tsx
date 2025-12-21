@@ -6,23 +6,15 @@ const kegiatan = [
     title: "Kerja Bakti Bersih Dusun",
     slug: "kerja-bakti-bersih-dusun",
     date: "2024-11-01",
-    thumbnail: "/images/kegiatan/kerjabakti.jpg",
+    previewImages: [
+      "https://picsum.photos/600/400.webp",
+      "https://picsum.photos/601/400.webp",
+      "https://picsum.photos/602/400.webp",
+    ],
     excerpt: "Kerja bakti bersama warga membersihkan lingkungan dusun.",
     content: `
       Kegiatan kerja bakti bersama warga Dusun Sindang Asih untuk menjaga
       kebersihan dan kenyamanan lingkungan.
-    `,
-  },
-  {
-    id: "turnamen-bola-02",
-    title: "Turnamen Sepak Bola Dusun",
-    slug: "turnamen-sepak-bola-dusun",
-    date: "2024-12-05",
-    thumbnail: "/images/kegiatan/sepakbola.jpg",
-    excerpt: "Turnamen sepak bola antar RT untuk mempererat silaturahmi.",
-    content: `
-      Turnamen ini diikuti oleh pemuda dari berbagai RT. Kegiatan berjalan
-      meriah dan penuh sportivitas.
     `,
   },
 ]
@@ -39,14 +31,16 @@ export default async function KegiatanDetail({ params }: PropsParams) {
   if (!item) return <div className="container py-10">Data tidak ditemukan.</div>
 
   return (
-    <div className="container py-10 space-y-6 bg-background">
-      <h1 className="text-3xl font-bold text-gray-800">{item.title}</h1>
-      <p className=" text-gray-900">{item.date}</p>
-
-      {item.thumbnail && (
-        <Image src={item.thumbnail} alt={item.title} className="rounded-xl w-full" />
-      )}
-
+    <div className="container py-10 px-4 space-y-8 bg-background">
+      <div className="space-y-2 text-center">
+        <h1 className="text-3xl font-bold text-gray-800">{item.title}</h1>
+        <p className=" text-gray-900">{item.date}</p>
+      </div>
+      <div className="grid md:grid-cols-3 gap-4">
+        {item.previewImages.map((image, index) => (
+          <Image key={index} src={image} alt={item.title} width={600} height={400} className="object-cover" />
+        ))}
+      </div>
       <div className="prose dark:prose-invert max-w-none text-gray-900">
         {item.content}
       </div>
