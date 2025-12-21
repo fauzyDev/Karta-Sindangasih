@@ -1,4 +1,6 @@
-import CardItem from "@/components/CardItem"
+import Link from "next/link";
+import Image from "next/image";
+import { Route } from "next";
 
 const kegiatan = [
   {
@@ -6,7 +8,7 @@ const kegiatan = [
     title: "Kerja Bakti Bersih Dusun",
     slug: "kerja-bakti-bersih-dusun",
     date: "2024-11-01",
-    thumbnail: "/images/kegiatan/kerjabakti.jpg",
+    thumbnail: "https://images.openai.com/static-rsc-1/uUQG6w_ewLf3w-9L5plQATy7v0Vb2MZNlXQl1CEt2k_i_GZSgbfmjC78GcUoCvoefWAnX05eMoWRCADqmPCG913uDUjV4qphiJzC4idMFhtGqY4BLIeCP-cLDsRwpyBsN3oUXIv687NGKRU1sbUtHg",
     excerpt: "Kerja bakti bersama warga membersihkan lingkungan dusun.",
     content: `
       Kegiatan kerja bakti bersama warga Dusun Sindang Asih untuk menjaga
@@ -17,7 +19,7 @@ const kegiatan = [
     id: "turnamen-bola-02",
     title: "Turnamen Sepak Bola Dusun",
     date: "2024-12-05",
-    thumbnail: "/images/kegiatan/sepakbola.jpg",
+    thumbnail: "https://images.openai.com/static-rsc-1/uUQG6w_ewLf3w-9L5plQATy7v0Vb2MZNlXQl1CEt2k_i_GZSgbfmjC78GcUoCvoefWAnX05eMoWRCADqmPCG913uDUjV4qphiJzC4idMFhtGqY4BLIeCP-cLDsRwpyBsN3oUXIv687NGKRU1sbUtHg",
     excerpt: "Turnamen sepak bola antar RT untuk mempererat silaturahmi.",
     content: `
       Turnamen ini diikuti oleh pemuda dari berbagai RT. Kegiatan berjalan
@@ -28,7 +30,7 @@ const kegiatan = [
     id: "turnamen-voly-02",
     title: "Turnamen voly ball Dusun",
     date: "2024-12-05",
-    thumbnail: "/images/kegiatan/sepakbola.jpg",
+    thumbnail: "https://images.openai.com/static-rsc-1/uUQG6w_ewLf3w-9L5plQATy7v0Vb2MZNlXQl1CEt2k_i_GZSgbfmjC78GcUoCvoefWAnX05eMoWRCADqmPCG913uDUjV4qphiJzC4idMFhtGqY4BLIeCP-cLDsRwpyBsN3oUXIv687NGKRU1sbUtHg",
     excerpt: "Turnamen sepak bola antar RT untuk mempererat silaturahmi.",
     content: `
       Turnamen ini diikuti oleh pemuda dari berbagai RT. Kegiatan berjalan
@@ -44,7 +46,24 @@ export default function KegiatanPage() {
 
       <div className="grid md:grid-cols-3 gap-6 p-4">
         {kegiatan.map((item) => (
-          <CardItem key={item.id} item={item} baseUrl="kegiatan"/>
+          <div key={item.id} className="border-3 border-gray-300 rounded-xl p-4 bg-card shadow-md overflow-hidden hover:shadow-lg transition">
+            <Image
+              src={item.thumbnail}
+              alt={item.title}
+              width={600}
+              height={400}
+              className="object-cover"
+            />
+            <div className="p-2 space-y-1">
+              <h3 className="text-xl font-semibold">{item.title}</h3>
+              <p className="text-sm text-muted-foreground mb-2">{item.date}</p>
+            </div>
+            <Link
+              href={`/kegiatan/${item.slug}` as Route}
+              className="text-primary font-semibold hover:underline bg-white shadow-md">
+              Selengkapnya →
+            </Link>
+          </div>
         ))}
       </div>
     </div>
