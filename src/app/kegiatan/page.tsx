@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Route } from "next";
+import { Card, CardHeader, CardContent } from '@/components/ui/card'
 
 const kegiatan = [
   {
@@ -46,7 +47,7 @@ export default function KegiatanPage() {
 
       <div className="grid md:grid-cols-3 gap-6 p-4">
         {kegiatan.map((item) => (
-          <div key={item.id} className="border-3 border-gray-300 rounded-xl p-4 bg-card shadow-md overflow-hidden hover:shadow-lg transition">
+          <Card key={item.id} className="border border-gray-200 p-4 bg-card shadow-md hover:shadow-lg transition-shadow duration-200">
             <Image
               src={item.thumbnail}
               alt={item.title}
@@ -54,16 +55,18 @@ export default function KegiatanPage() {
               height={400}
               className="object-cover"
             />
-            <div className="p-2 space-y-1">
+            <CardHeader className="p-2 space-y-1">
               <h3 className="text-xl font-semibold">{item.title}</h3>
               <p className="text-sm text-muted-foreground mb-2">{item.date}</p>
-            </div>
-            <Link
-              href={`/kegiatan/${item.slug}` as Route}
-              className="text-primary font-semibold hover:underline bg-white shadow-md">
-              Selengkapnya →
-            </Link>
-          </div>
+            </CardHeader>
+            <CardContent className="p-2">
+              <Link
+                href={`/kegiatan/${item.slug}` as Route}
+                className="text-primary font-semibold hover:underline">
+                Selengkapnya →
+              </Link>
+            </CardContent>
+          </Card>
         ))}
       </div>
     </div>
