@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Route } from "next";
-import { Card, CardHeader, CardContent } from '@/components/ui/card'
+import { Card, CardHeader, CardContent } from '@/components/ui/card';
 
 const kegiatan = [
   {

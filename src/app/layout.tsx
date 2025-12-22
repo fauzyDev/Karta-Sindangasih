@@ -23,16 +23,16 @@ export const metadata: Metadata = pageMetadata;
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const cookieStore = await cookies()
   const pathname = cookieStore.get("pathname")?.value || ""
-  const isDashboard = pathname.startsWith("/dashboard")
+  const isPathname = ["/dashboard", "/auth/login"].some((path) => pathname.startsWith(path))
 
   return (
     <html lang="id" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth bg-background text-foreground overscroll-none`}>
         <GoogleTagManager gtmId="	GTM-TD7BDCD7" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema]) }} />
-        {!isDashboard && <Navbar />}
+        {!isPathname && <Navbar />}
         {children}
-        {!isDashboard && <Toaster />}
+        {!isPathname && <Toaster />}
       </body>
     </html>
   );

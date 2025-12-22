@@ -40,7 +40,7 @@ export default function AnnouncementsPreview() {
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {announcements.map((announcement) => (
-            <Card key={announcement.id} className="hover:shadow-lg transition-shadow duration-200 shadow-md bg-card border border-gray-200">
+            <Card key={announcement.id} className="flex flex-col hover:shadow-lg transition-shadow duration-200 shadow-md bg-card border border-gray-200">
               <CardHeader className="pb-3">
                 <div className="flex items-center gap-2 text-blue-600 mb-2">
                   <Calendar className="w-4 h-4" />
@@ -50,7 +50,7 @@ export default function AnnouncementsPreview() {
                   {announcement.title}
                 </h3>
               </CardHeader>
-              <CardContent className="pt-0">
+              <CardContent className="pt-0 mt-auto">
                 <button className="text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors">
                   Selengkapnya →
                 </button>

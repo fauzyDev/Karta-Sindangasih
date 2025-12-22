@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Route } from "next"
+import { Card, CardHeader, CardContent } from '@/components/ui/card';
 
 const pengumuman = [
   {
@@ -22,17 +23,19 @@ export default function PengumumanPage() {
 
       <div className="grid md:grid-cols-4 gap-6 p-4">
         {pengumuman.map((item) => (
-          <div key={item.id} className="border-3 border-gray-300 rounded-xl p-4 bg-card shadow-md overflow-hidden hover:shadow-lg transition">
-            <div className="p-1 space-y-1">
+          <Card key={item.id} className="border-2 border-gray-300 p-4 bg-card shadow-md hover:shadow-lg transition-shadow duration-200">
+            <CardHeader className="p-1 space-y-1">
               <h3 className="text-xl font-semibold">{item.title}</h3>
               <p className="text-sm text-muted-foreground mb-2">{item.date}</p>
-            </div>
-            <Link
-              href={`/pengumuman/${item.slug}` as Route}
-              className="text-primary font-semibold hover:underline bg-white shadow-md">
-              Selengkapnya →
-            </Link>
-          </div>
+            </CardHeader>
+            <CardContent className="p-2">
+              <Link
+                href={`/pengumuman/${item.slug}` as Route}
+                className="text-primary font-semibold hover:underline">
+                Selengkapnya →
+              </Link>
+            </CardContent>
+          </Card>
         ))}
       </div>
     </div>
