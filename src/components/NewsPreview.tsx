@@ -43,13 +43,13 @@ export default function NewsPreview() {
           {news.map((item) => (
             <Card key={item.id} className="flex flex-col overflow-hidden bg-card border border-gray-200 shadow-md hover:shadow-lg hover:translate-y-1 transition-all duration-300 group cursor-pointer">
               <div className="relative h-48 overflow-hidden bg-gray-200">
-                <Image src={item.image} alt={item.title} width={600} height={400}/>
+                <Image src={item.image} alt={item.title} width={600} height={400} loading="lazy"/>
               </div>
 
               <CardContent className="p-6 flex-1">
                 <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
                   <Calendar className="w-4 h-4" />
-                  <span>{item.date}</span>
+                  <span>{item.date}</span> 
                 </div>
 
                 <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-emerald-600 transition-colors">

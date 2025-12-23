@@ -1,10 +1,36 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Camera, ArrowRight } from 'lucide-react'
 
-export default function GalleryPreview() {
-  const galleryImages = Array.from({ length: 6 }, (_, i) => i + 1)
+const galleryImages = [
+  {
+    id: "1",
+    url: "https://www.shareable.net/wp-content/uploads/2023/05/sedang_1477229144sambatan.jpeg"
+  },
+  {
+    id: "2",
+    url: "https://images.solopos.com/2013/01/1601rehab-kliwen-1.jpg"
+  },
+  {
+    id: "3",
+    url: "https://cdn.antaranews.com/cache/1200x800/2022/03/16/5.jpg"
+  },
+  {
+    id: "4",
+    url: "https://img.antaranews.com/cache/730x487/2020/08/16/panjat-3.jpg"
+  },
+  {
+    id: "5",
+    url: "https://assets.promediateknologi.id/crop/0x0%3A0x0/750x500/webp/photo/p1/693/2023/08/17/3da88acd-eb89-40c8-8756-7815c7f7a211xx-921462384.jpg"
+  },
+  {
+    id: "6",
+    url: "https://cdn.antaranews.com/cache/1200x800/2019/08/18/antarafoto-pemeran-film-bumi-manusia-kunjungi-lkbn-antara-310719-sgd-5.jpg"
+  }
+]
 
+export default function GalleryPreview() {
   return (
     <section className="py-16 bg-slate-100 border-t border-slate-200">
       <div className="container mx-auto px-4">
@@ -21,18 +47,9 @@ export default function GalleryPreview() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-8">
-          {galleryImages.map((index) => (
-            <div
-              key={index}
-              className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer"
-            >
-              <div className="absolute inset-0 bg-linear-to-br from-emerald-400 via-teal-400 to-cyan-400 opacity-80"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-white text-4xl opacity-60 group-hover:opacity-100 transition-opacity">
-                  📷
-                </div>
-              </div>
-              <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity"></div>
+          {galleryImages.map((item) => (
+            <div key={item.id} className="relative aspect-4/3 overflow-hidden w-full rounded-lg group cursor-pointer">
+              <Image src={item.url} alt="images" loading="lazy" fill className="object-cover" />
             </div>
           ))}
         </div>

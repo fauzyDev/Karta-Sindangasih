@@ -53,6 +53,7 @@ export default function KegiatanPage() {
               alt={item.title}
               width={600}
               height={400}
+              loading="lazy"
               className="object-cover"
             />
             <CardHeader className="p-2 space-y-1">
