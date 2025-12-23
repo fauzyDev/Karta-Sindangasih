@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Karang Taruna | Dashboard",
 };
 
-export default async function LayoutDashboard({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function DashboardLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     const cookieStore = await cookies()
     const activeThemeValue = cookieStore.get("active_theme")?.value;
     const isScaled = activeThemeValue?.endsWith("-scaled");
