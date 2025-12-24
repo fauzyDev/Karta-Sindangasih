@@ -6,11 +6,11 @@ import { Camera, ArrowRight } from 'lucide-react'
 const galleryImages = [
   {
     id: "1",
-    url: "https://www.shareable.net/wp-content/uploads/2023/05/sedang_1477229144sambatan.jpeg"
+    url: "https://akcdn.detik.net.id/visual/2023/08/11/lomba-17-agustus_11.jpeg?q=90&w=720"
   },
   {
     id: "2",
-    url: "https://images.solopos.com/2013/01/1601rehab-kliwen-1.jpg"
+    url: "https://cdn.antaranews.com/cache/1200x800/2020/08/16/antarafoto-lomba-17-agustus-kendari-160820-jjn-2.jpg"
   },
   {
     id: "3",
@@ -48,8 +48,14 @@ export default function GalleryPreview() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-8">
           {galleryImages.map((item) => (
-            <div key={item.id} className="relative aspect-4/3 overflow-hidden w-full rounded-lg group cursor-pointer">
-              <Image src={item.url} alt="images" loading="lazy" fill className="object-cover" />
+            <div key={item.id} className="relative aspect-4/3 overflow-hidden w-full rounded-md group cursor-pointer">
+              <Image
+                src={item.url}
+                alt="images"
+                loading="lazy"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw,25vw"
+                className="object-cover" />
             </div>
           ))}
         </div>

@@ -38,7 +38,16 @@ export default async function KegiatanDetail({ params }: PropsParams) {
       </div>
       <div className="grid md:grid-cols-3 gap-4">
         {item.previewImages.map((image, index) => (
-          <Image key={index} src={image} alt={item.title} width={600} height={400} className="object-cover" loading="lazy"/>
+          <div className="relative aspect-4/3 w-full">
+            <Image
+              key={index}
+              src={image}
+              alt={item.title}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw,25vw"
+              className="object-cover"
+              loading="lazy" />
+          </div>
         ))}
       </div>
       <div className="prose dark:prose-invert max-w-none text-gray-900">

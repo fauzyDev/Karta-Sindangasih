@@ -48,14 +48,16 @@ export default function KegiatanPage() {
       <div className="grid md:grid-cols-3 gap-6 p-4">
         {kegiatan.map((item) => (
           <Card key={item.id} className="border border-gray-200 p-4 bg-card shadow-md hover:shadow-lg transition-shadow duration-200">
+            <div className="relative aspect-4/3 w-full">
             <Image
               src={item.thumbnail}
               alt={item.title}
-              width={600}
-              height={400}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw,25vw"
               loading="lazy"
               className="object-cover"
             />
+            </div>
             <CardHeader className="p-2 space-y-1">
               <h3 className="text-xl font-semibold">{item.title}</h3>
               <p className="text-sm text-muted-foreground mb-2">{item.date}</p>

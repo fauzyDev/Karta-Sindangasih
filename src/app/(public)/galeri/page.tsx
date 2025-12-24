@@ -37,7 +37,15 @@ export default function page() {
       <div className="grid md:grid-cols-4 gap-6 p-4">
         {image.map((index) => (
           <Card key={index.id} className="border border-gray-200 p-4 bg-card shadow-md hover:shadow-lg transition-shadow duration-200">
-            <Image src={index.url} alt="galeri" height={400} width={600} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw,25vw" className="w-full h-auto" loading="lazy" />
+            <div className="relative aspect-4/3 w-full">
+              <Image
+                src={index.url}
+                alt="galeri"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw,25vw"
+                className="object-cover"
+                loading="lazy" />
+            </div>
             <CardHeader className="p-1 space-y-1">
               <h3 className="text-xl font-semibold">{index.title}</h3>
             </CardHeader>
