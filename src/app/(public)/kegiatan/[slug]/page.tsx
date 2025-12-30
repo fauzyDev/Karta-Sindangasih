@@ -28,7 +28,7 @@ export default async function KegiatanDetail({ params }: PropsParams) {
 
   const item = kegiatan.find((k) => k.slug === slug)
 
-  if (!item) return <div className="container py-10">Data tidak ditemukan.</div>
+  if (!item) return <div className="container py-10 text-center font-semibold">Data tidak ditemukan.</div>
 
   return (
     <div className="container py-10 px-4 space-y-8 bg-background">
@@ -38,9 +38,8 @@ export default async function KegiatanDetail({ params }: PropsParams) {
       </div>
       <div className="grid md:grid-cols-3 gap-4">
         {item.previewImages.map((image, index) => (
-          <div className="relative aspect-4/3 w-full">
+          <div key={index} className="relative aspect-4/3 w-full">
             <Image
-              key={index}
               src={image}
               alt={item.title}
               fill

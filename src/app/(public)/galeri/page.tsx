@@ -6,26 +6,8 @@ import { Card, CardHeader, CardContent } from '@/components/ui/card';
 const image = [
   {
     id: "1",
-    slug: "kerja-bakti-bersih-desa",
-    title: "Kerja Bakti Bersih Desa",
-    url: "https://picsum.photos/800/600.webp",
-  },
-  {
-    id: "2",
-    slug: "kerja-bakti-bersih-desa",
-    title: "Kerja Bakti Bersih Desa",
-    url: "https://picsum.photos/800/600.webp",
-  },
-  {
-    id: "3",
-    slug: "kerja-bakti-bersih-desa",
-    title: "Kerja Bakti Bersih Desa",
-    url: "https://picsum.photos/800/600.webp",
-  },
-  {
-    id: "4",
-    slug: "kerja-bakti-bersih-desa",
-    title: "Kerja Bakti Bersih Desa",
+    kegatanSlug: "kerja-bakti-bersih-dusun",
+    title: "Kerja Bakti Bersih Dusun",
     url: "https://picsum.photos/800/600.webp",
   },
 ]
@@ -51,7 +33,7 @@ export default function page() {
             </CardHeader>
             <CardContent className="p-2">
               <Link
-                href={`/kegiatan/${index.slug}` as Route}
+                href={`/galeri/${index.kegatanSlug }` as Route}
                 className="text-primary text-center font-semibold hover:underline">
                 Selengkapnya →
               </Link>

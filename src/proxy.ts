@@ -1,16 +1,12 @@
-import { NextResponse, NextRequest } from "next/server";
+import { NextRequest } from "next/server";
+import { updateSession } from "./lib/supabase/proxy";
 
-export function proxy(req: NextRequest) {
-    const pathname = req.nextUrl.pathname;
-
-    const res = NextResponse.next();
-    res.cookies.set("pathname", pathname);
-
-    return res;
+export async function proxy(req: NextRequest) {
+    return await updateSession(req)
 }
 
 export const config = {
     matcher: [
-        "/:path*"
+        "/dashboard/:path*"
     ],
 };

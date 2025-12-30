@@ -14,7 +14,7 @@ const pengumuman = [
 export default function Page({ params }) {
   const item = pengumuman.find((p) => p.id === params.id)
 
-  if (!item) return <div className="container py-10">Tidak ditemukan.</div>
+  if (!item) return <div className="container py-10 text-center font-semibold">Tidak ditemukan.</div>
 
   return (
     <div className="container py-10 space-y-6 bg-background">

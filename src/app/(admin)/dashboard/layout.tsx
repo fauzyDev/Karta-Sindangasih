@@ -1,7 +1,7 @@
 import React from 'react'
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils/cn";
 import { ThemeProvider } from "@/components/Providers/ThemeProvider";
 import { ActiveThemeProvider } from "@/components/Theme/ActiveTheme";
 import { AppSidebar } from "@/components/Sidebar/AppSidebar"

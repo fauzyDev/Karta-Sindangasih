@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { metadata as pageMetadata } from "./metadata";
 import { GoogleTagManager } from '@next/third-parties/google';
-import { organizationSchema } from "@/lib/schema";
+import { organizationSchema } from "@/lib/metadata/schema";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
