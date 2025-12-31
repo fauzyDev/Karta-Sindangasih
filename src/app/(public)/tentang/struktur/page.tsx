@@ -16,14 +16,14 @@ import {
 type Person = { title: string; name: string; icon?: any };
 
 export default function OrganizationStructure() {
-  const top: Person = { title: "Pembina", name: "Irvan Firmansyah Sp.d", icon: Award };
+  const top: Person = { title: "Pembina", name: "Tidak diketahui", icon: Award };
   const executives: Person[] = [
-    { title: "Ketua", name: "Cahya Suhendera", icon: User },
-    { title: "Wakil Ketua", name: "Yais", icon: Users },
+    { title: "Ketua", name: "Tidak diketahui", icon: User },
+    { title: "Wakil Ketua", name: "Tidak diketahui", icon: Users },
   ];
   const officers: Person[] = [
-    { title: "Sekretaris", name: "Fahrul", icon: FileText },
-    { title: "Bendahara", name: "Tri Wahyuni", icon: ShieldCheck },
+    { title: "Sekretaris", name: "Tidak diketahui", icon: FileText },
+    { title: "Bendahara", name: "Tidak diketahui", icon: ShieldCheck },
   ];
   const seksi = [
     { title: "Seksi Kegiatan", icon: Activity },

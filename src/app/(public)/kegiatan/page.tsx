@@ -16,28 +16,6 @@ const kegiatan = [
       kebersihan dan kenyamanan lingkungan.
     `,
   },
-  {
-    id: "turnamen-bola-02",
-    title: "Turnamen Sepak Bola Dusun",
-    date: "2024-12-05",
-    thumbnail: "https://images.openai.com/static-rsc-1/uUQG6w_ewLf3w-9L5plQATy7v0Vb2MZNlXQl1CEt2k_i_GZSgbfmjC78GcUoCvoefWAnX05eMoWRCADqmPCG913uDUjV4qphiJzC4idMFhtGqY4BLIeCP-cLDsRwpyBsN3oUXIv687NGKRU1sbUtHg",
-    excerpt: "Turnamen sepak bola antar RT untuk mempererat silaturahmi.",
-    content: `
-      Turnamen ini diikuti oleh pemuda dari berbagai RT. Kegiatan berjalan
-      meriah dan penuh sportivitas.
-    `,
-  },
-  {
-    id: "turnamen-voly-02",
-    title: "Turnamen voly ball Dusun",
-    date: "2024-12-05",
-    thumbnail: "https://images.openai.com/static-rsc-1/uUQG6w_ewLf3w-9L5plQATy7v0Vb2MZNlXQl1CEt2k_i_GZSgbfmjC78GcUoCvoefWAnX05eMoWRCADqmPCG913uDUjV4qphiJzC4idMFhtGqY4BLIeCP-cLDsRwpyBsN3oUXIv687NGKRU1sbUtHg",
-    excerpt: "Turnamen sepak bola antar RT untuk mempererat silaturahmi.",
-    content: `
-      Turnamen ini diikuti oleh pemuda dari berbagai RT. Kegiatan berjalan
-      meriah dan penuh sportivitas.
-    `,
-  },
 ]
 
 export default function KegiatanPage() {
