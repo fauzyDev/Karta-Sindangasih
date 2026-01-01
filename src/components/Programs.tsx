@@ -46,7 +46,7 @@ export default function Programs() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {programs.map((program) => (
-            <Card key={program.id} className="group hover:shadow-lg transition-all duration-300 shadow-md bg-card border border-gray-200 overflow-hidden">
+            <Card key={program.id} className="group hover:shadow-lg hover:translate-y-1 transition-all duration-300 shadow-md bg-card border border-gray-200 overflow-hidden">
               <div className={`h-2 bg-linear-to-r ${program.color}`}></div>
               <CardContent className="p-6 text-center">
                 <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-linear-to-br ${program.color} flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300`}>

@@ -51,7 +51,7 @@ export default function AnnouncementsPreview() {
                 </h3>
               </CardHeader>
               <CardContent className="pt-0 mt-auto">
-                <button className="text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors">
+                <button className="text-blue-600 hover:text-blue-700 hover:cursor-pointer hover:underline font-medium text-sm transition-colors">
                   Selengkapnya →
                 </button>
               </CardContent>

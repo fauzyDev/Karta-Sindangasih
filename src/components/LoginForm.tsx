@@ -12,6 +12,7 @@ import {
     FieldLabel,
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
+import { loginAction } from "@/actions/auth"
 
 export function LoginForm({
     className,
@@ -24,12 +25,13 @@ export function LoginForm({
                     <CardTitle className="text-center">Login sebagai Admin</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <form>
+                    <form action={loginAction}>
                         <FieldGroup>
                             <Field>
                                 <FieldLabel htmlFor="username">Username</FieldLabel>
                                 <Input
                                     id="username"
+                                    name="username"
                                     type="text"
                                     placeholder="Masukkan username"
                                     required
@@ -39,7 +41,7 @@ export function LoginForm({
                                 <div className="flex items-center">
                                     <FieldLabel htmlFor="password">Password</FieldLabel>
                                 </div>
-                                <Input id="password" type="password" placeholder="Masukkan password" required />
+                                <Input id="password" name="password" type="password" placeholder="Masukkan password" required />
                             </Field>
                             <Field>
                                 <Button type="submit" className="hover:cursor-pointer">Login</Button>

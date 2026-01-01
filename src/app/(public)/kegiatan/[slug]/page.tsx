@@ -34,7 +34,7 @@ export default async function KegiatanDetail({ params }: PropsParams) {
     <div className="container py-10 px-4 space-y-8 bg-background">
       <div className="space-y-2 text-center">
         <h1 className="text-3xl font-bold text-gray-800">{item.title}</h1>
-        <p className=" text-gray-900">{item.date}</p>
+        <p className="text-gray-900 ">{item.date}</p>
       </div>
       <div className="grid md:grid-cols-3 gap-4">
         {item.previewImages.map((image, index) => (

@@ -23,7 +23,7 @@ export default function PengumumanPage() {
 
       <div className="grid md:grid-cols-4 gap-6 p-4">
         {pengumuman.map((item) => (
-          <Card key={item.id} className="border-2 border-gray-300 p-4 bg-card shadow-md hover:shadow-lg transition-shadow duration-200">
+          <Card key={item.id} className="border-2 border-gray-300 p-4 bg-card shadow-md hover:shadow-lg transition-shadow duration-300">
             <CardHeader className="p-1 space-y-1">
               <h3 className="text-xl font-semibold">{item.title}</h3>
               <p className="text-sm text-muted-foreground mb-2">{item.date}</p>

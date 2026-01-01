@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
             size="lg"
-            className="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-700 hover:cursor-pointer text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-md transition-all duration-200 hover:shadow-lg"
+            className="w-full sm:w-auto bg-emerald-400 hover:bg-emerald-600 hover:cursor-pointer text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-md transition-all duration-200 hover:shadow-lg"
           >
             Lihat Kegiatan
           </Button>

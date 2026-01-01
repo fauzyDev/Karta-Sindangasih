@@ -15,7 +15,7 @@ export default function ContactSection() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          <Card className="bg-card border border-gray-200 text-center shadow-md hover:shadow-lg hover:translate-y-1 transition-shadow duration-300 group cursor-pointer">
+          <Card className="bg-card border border-gray-200 text-center shadow-md hover:shadow-lg hover:translate-y-1 transition-all duration-300 group cursor-pointer">
             <CardContent className="p-6">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-600 transition-colors">
                 <MessageCircle className="w-8 h-8 text-green-600 group-hover:text-white transition-colors" />

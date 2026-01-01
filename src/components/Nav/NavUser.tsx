@@ -1,6 +1,5 @@
 "use client"
 
-import { useRouter } from "next/navigation"
 import {
   IconDotsVertical,
   IconLogout,
@@ -27,16 +26,14 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 import { Button } from "../ui/button"
+import { logoutAction } from "@/actions/auth"
 
 export function NavUser({ user }: { user: { name: string; email: string; avatar: string } }) {
   const { isMobile } = useSidebar()
-  const router = useRouter();
 
   const logout = async () => {
-    await fetch("/api/logout", { method: "POST" });
-    router.push("/");
-    router.refresh();
-  };
+    await logoutAction()
+  }
 
   return (
     <SidebarMenu>

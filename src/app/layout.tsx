@@ -21,10 +21,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="id" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth bg-background text-foreground overscroll-none`}>
-        <GoogleTagManager gtmId="	GTM-TD7BDCD7" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema]) }} />
+        <GoogleTagManager gtmId="GTM-TD7BDCD7"/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema]) }}/>
         {children}
       </body>
     </html>
-  );
+  )
 }

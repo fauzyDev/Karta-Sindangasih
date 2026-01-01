@@ -18,7 +18,7 @@ export default function page() {
       <h1 className='text-3xl text-center text-gray-900 font-bold'>Galeri Kegiatan</h1>
       <div className="grid md:grid-cols-4 gap-6 p-4">
         {image.map((index) => (
-          <Card key={index.id} className="border border-gray-200 p-4 bg-card shadow-md hover:shadow-lg transition-shadow duration-200">
+          <Card key={index.id} className="border border-gray-200 p-4 bg-card shadow-md hover:shadow-lg transition-shadow duration-300">
             <div className="relative aspect-4/3 w-full">
               <Image
                 src={index.url}

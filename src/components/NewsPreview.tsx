@@ -41,7 +41,7 @@ export default function NewsPreview() {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {news.map((item) => (
-            <Card key={item.id} className="flex flex-col overflow-hidden bg-card border border-gray-200 shadow-md hover:shadow-lg hover:translate-y-1 transition-all duration-300 group cursor-pointer">
+            <Card key={item.id} className="flex flex-col overflow-hidden bg-card border border-gray-200 shadow-md hover:shadow-lg hover:translate-y-1 transition-all duration-300 group">
               <div className="relative h-48 overflow-hidden aspect-4/3 w-full bg-gray-200">
                 <Image
                   src={item.image}
@@ -67,7 +67,7 @@ export default function NewsPreview() {
                 </p>
               </CardContent>
               <div className="p-6 pt-0">
-                <button className="flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium transition-colors">
+                <button className="flex items-center gap-2 text-emerald-500 hover:text-emerald-600 hover:cursor-pointer hover:underline font-medium transition-colors">
                   <span>Baca Selengkapnya</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>

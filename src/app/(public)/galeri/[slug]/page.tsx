@@ -51,7 +51,7 @@ export default async function GaleriDetail({ params }: PropsParams) {
       <div className="flex justify-center mt-1 translate-y-3">
         <Link
           href={`/kegiatan/${data.kegiatanSlug}`}
-          className="inline-block mt-6 px-4 py-2 bg-black text-white rounded-lg"
+          className="inline-block mt-6 px-4 py-2 bg-blue-500 hover:bg-blue-600 transition-all duration-200 font-medium text-white rounded-lg"
         >
           Lihat Detail Kegiatan →
         </Link>
