@@ -31,10 +31,6 @@ import { logoutAction } from "@/actions/auth"
 export function NavUser({ user }: { user: { name: string; email: string; avatar: string } }) {
   const { isMobile } = useSidebar()
 
-  const logout = async () => {
-    await logoutAction()
-  }
-
   return (
     <SidebarMenu>
       <SidebarMenuItem>
@@ -94,10 +90,12 @@ export function NavUser({ user }: { user: { name: string; email: string; avatar:
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
-              <Button variant="link" size="icon" onClick={logout} className="hover:cursor-pointer w-full justify-start">
-                <IconLogout />
-                Log out
-              </Button>
+              <form action={logoutAction}>
+                <Button variant="link" size="icon" className="hover:cursor-pointer w-full justify-start">
+                  <IconLogout />
+                  Log out
+                </Button>
+              </form>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

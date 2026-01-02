@@ -1,16 +1,23 @@
 "use server"
 
+import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
 import { createClient } from "@/lib/supabase/server"
-
 
 export async function loginAction(formData: FormData) {
     const username = formData.get("username")?.toString().trim() as string
     const password = formData.get("password") as string
 
-     console.log("FORM:", [...formData.entries()])
-
     const supabase = await createClient()
+
+    const { error } = await supabase.auth.signInWithPassword({
+        email: `${username}@karangtaruna.local`,
+        password,
+    })
+
+    if (error) {
+        throw error
+    }
 
     const { data: admin } = await supabase
         .from("admin_profiles")
@@ -22,22 +29,16 @@ export async function loginAction(formData: FormData) {
         throw new Error("Username tidak ditemukan")
     }
 
-    const { error } = await supabase.auth.signInWithPassword({
-        email: `${username}@karangtaruna.local`,
-        password,
-    })
-
-    if (error) {
-        throw error
-    }
-
-    redirect("/dashboard/admin")
+    redirect("/dashboard")
 }
 
 export async function logoutAction() {
     const supabase = await createClient()
     await supabase.auth.signOut()
+
+    const cookieStore = await cookies()
+
+    cookieStore.delete("active_theme")
+
     redirect("/")
 }
-
-// supabase rls polices
