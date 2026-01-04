@@ -1,7 +1,7 @@
 "use server"
 
+import { createClient } from "@/lib/supabase/server"
 
-
-export default function kegiatanAction() {
-
+export default async function kegiatanAction() {
+    const supabase = await createClient()
 }

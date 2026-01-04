@@ -37,7 +37,6 @@ export async function logoutAction() {
     await supabase.auth.signOut()
 
     const cookieStore = await cookies()
-
     cookieStore.delete("active_theme")
 
     redirect("/")

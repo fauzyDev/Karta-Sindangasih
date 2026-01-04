@@ -1,7 +1,7 @@
 "use server"
 
-import React from 'react'
+import { createClient } from "@/lib/supabase/server"
 
-export default function pengumumanAction() {
-
+export default async function pengumumanAction() {
+    const supabase = await createClient()
 }
