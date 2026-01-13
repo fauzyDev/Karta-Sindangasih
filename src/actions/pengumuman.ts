@@ -1,7 +1,7 @@
 "use server"
 
-import { createClient } from "@/lib/supabase/server"
+import { createClient } from "@/lib/supabase/server";
 
-export default async function pengumumanAction() {
+export async function pengumumanAction() {
     const supabase = await createClient()
 }

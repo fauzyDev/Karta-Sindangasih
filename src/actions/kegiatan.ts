@@ -1,9 +1,9 @@
 "use server"
 
-import { createClient } from "@/lib/supabase/server"
-import { kegiatanSchema } from "@/lib/validator/kegiatanSchema"
+import { createClient } from "@/lib/supabase/server";
+import { kegiatanSchema } from "@/lib/validator/kegiatanSchema";
 
-export default async function kegiatanAction(formData: FormData) {
+export async function kegiatanAction(formData: FormData) {
     const parsed = kegiatanSchema.safeParse({
         title: formData.get("title") as string,
         slug: formData.get("slug") as string,

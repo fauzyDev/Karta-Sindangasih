@@ -1,7 +1,7 @@
 "use server"
 
 import { createClient } from "@/lib/supabase/server";
-import { galeriSchema } from "@/lib/validator/galeriSchema";
+import { galeriUploadSchema, galeriDBschema } from "@/lib/validator/galeriSchema";
 import { randomUUID } from "crypto";
 
 const MAX_FILES = 8;
@@ -9,9 +9,9 @@ const MAX_FILE_SIZE = 1.5 * 1024 * 1024; // 1.5MB
 const MAX_TOTAL_SIZE = 4 * 1024 * 1024; // 4MB
 const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/webp"];
 
-export default async function galeriAction(formData: FormData) {
-    const parsed = galeriSchema.safeParse({
-        kegiatatan: formData.get("kegiatan_id") as string,
+export async function galeriAction(formData: FormData) {
+    const parsed = galeriUploadSchema.safeParse({
+        kegiatatan_id: formData.get("kegiatan_id") as string,
         title: formData.get("title") as string,
         images: formData.getAll("images") as File[]
     })
@@ -64,9 +64,20 @@ export default async function galeriAction(formData: FormData) {
             uploadedPaths.push(filePath);
         }
 
+        const dbPayload = galeriDBschema.safeParse({
+            kegiatan_id: parsed.data.kegiatan_id,
+            title: parsed.data.title,
+            images: uploadedPaths
+        })
+
+        if (!dbPayload.success) {
+            console.error(dbPayload.error)
+            throw new Error("Validasi gagal")
+        }
+
         const { error: galeriError } = await supabase
             .from("galeri")
-            .insert(parsed.data)
+            .insert(dbPayload.data)
 
         if (galeriError) {
             console.error(galeriError)
@@ -81,4 +92,10 @@ export default async function galeriAction(formData: FormData) {
     }
 
     return null
+}
+
+export async function getGaleriAction() {
+    const supabase = await createClient()
+
+      
 }

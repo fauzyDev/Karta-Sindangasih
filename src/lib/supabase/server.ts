@@ -1,6 +1,7 @@
-import { createServerClient } from '@supabase/ssr'
-import { cookies } from 'next/headers'
-import { env } from '../config/env'
+import "server-only";
+import { createServerClient } from '@supabase/ssr';
+import { cookies } from 'next/headers';
+import { env } from '../config/env';
 
 export async function createClient() {
   const cookieStore = await cookies()
